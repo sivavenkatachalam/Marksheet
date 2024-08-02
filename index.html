@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mark Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+    border:5px solid brown;
+    width:800px;
+    height:1500px;
+}
+.serial{
+    display:flex;   
+}
+#image1{
+    margin-left:150px;
+}
+#image2{
+    margin-left:200px;
+}
+.curve-text-container {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.curve-text {
+    font-size: 20px;
+    fill: #333;
+    color:brown;
+}
+.clg p{
+    color:brown;
+    font-size:19px;
+}
+.clg h1{
+    color:burlywood;
+    font-size:35px;
+} 
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+   
+    
+}
+
+table , th, td {
+    border: 1px solid #000;
+}
+
+ th, td {
+    padding: 10px;
+    text-align: center;
+}
+.results {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer {
+    
+    margin-top: 40px;
+    display:flex;
+    
+}
+.footer #para{
+    margin-left:300px;
+}
+
+input[type="text"], input[type="number"] {
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    width: calc(100% - 20px);
+    text-align: center;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="serial">
+         <h3>Sr.No. <span style="color:red">00000000</span></h3>
+         <img src="https://tse4.mm.bing.net/th?id=OIP.KiVi89do8tJmo7_dJ6LItQHaHa&pid=Api&P=0&h=180" alt="College Logo" height="200px" width="200px" id="image1">
+         <img src="https://www.qr-code-generator.com/wp-content/themes/qr/images/banners/frames/websiteQRCode_noFrame.png" height="100px" width="100px" id="image2">
+        </div>
+        <div class="curve-text-container">
+            <svg width="500" height="150" viewBox="0 0 500 150">
+                <path id="curve" d="M10,80 Q250,10 490,85" fill="transparent"/>
+                <text width="500">
+                    <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle" class="curve-text">
+    
+                       All India Institute of Fire Technology and Safety Management
+                    </textPath>
+                </text>
+            </svg>
+               <div class="clg">
+                <p><b>Associated with Technical and Paramedical Education Council<br>
+                An Autonomous Institution Recognized by Government of India</b></p>
+                <h1>Annual Statement of Marks</h1>
+            </div>
+
+        </div>
+        <table>
+            <tr>
+                <td colspan="2" ><span style="color:brown"><strong>Name of the Candidate </strong></span><br><br><strong>Siva V</strong></td>
+                <td colspan="2"><span style="color:brown"><strong>Course name with Code</strong></span><br><br><strong> Diploma in Fire & Safety Management (DFS012)</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td  colspan="1"><span style="color:brown"><strong>Reg.No.</strong></span><br><br><strong>720821103103</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td  colspan="1"><span style="color:brown"><strong>Enrollment No.</strong></span><br><br><strong>720821103103</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td colspan="2" ><span style="color:brown"><strong>Authorized Training Centre Name with Code</strong></span><br><br><strong>Hindusthan</strong><br><strong>641032</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>    
+            </tr>
+        </table>
+        <table id="main">
+            <thead>
+                <tr>
+                    <th><span style="color:brown">Subject Code</span></th>
+                    <th><span style="color:brown">Subject Name</span></th>
+                    <th><span style="color:brown">Max. Marks</span></th>
+                    <th colspan="2"><span style="color:brown">Marks Obtained</span></th>
+                    <th><span style="color:brown">Total</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DFS012-101</td>
+                    <td>Fire Science and Technology</td>
+                    <td>100</td>
+                    <td><input type="number" class="marks" placeholder="Theory" onchange="calculateTotal(this)"></td>
+                    <td><input type="number" class="marks" placeholder="Practical" onchange="calculateTotal(this)"></td>
+                    <td><span class="total-marks">0</span></td>
+                </tr>
+                <tr>
+                    <td>DFS012-102</td>
+                    <td>Fire Prevention and Investigation</td>
+                    <td>100</td>
+                    <td><input type="number" class="marks" placeholder="Theory" onchange="calculateTotal(this)"></td>
+                    <td><input type="number" class="marks" placeholder="Practical" onchange="calculateTotal(this)"></td>
+                    <td><span class="total-marks">0</span></td>
+                </tr>
+                <tr>
+                    <td>DFS012-103</td>
+                    <td>Fire Protection and Control</td>
+                    <td>100</td>
+                    <td><input type="number" class="marks" placeholder="Theory" onchange="calculateTotal(this)"></td>
+                    <td><input type="number" class="marks" placeholder="Practical" onchange="calculateTotal(this)"></td>
+                    <td><span class="total-marks">0</span></td>
+                </tr>
+                <tr>
+                    <td>DFS012-104</td>
+                    <td>Fire Extinction and Control</td>
+                    <td>100</td>
+                    <td><input type="number" class="marks" placeholder="Theory" onchange="calculateTotal(this)"></td>
+                    <td><input type="number" class="marks" placeholder="Practical" onchange="calculateTotal(this)"></td>
+                    <td><span class="total-marks">0</span></td>
+                </tr>
+                <tr>
+                    <td>DFS012-105</td>
+                    <td>Industrial Safety Management</td>
+                    <td>100</td>
+                    <td><input type="number" class="marks" placeholder="Theory" onchange="calculateTotal(this)"></td>
+                    <td><input type="number" class="marks" placeholder="Practical" onchange="calculateTotal(this)"></td>
+                    <td><span class="total-marks">0</span></td>
+                </tr>
+                <tr>
+                    <td>DFS012-106</td>
+                    <td>Practical I</td>
+                    <td>100</td>
+                    <td><input type="number" class="marks" placeholder="Theory" onchange="calculateTotal(this)"></td>
+                    <td><input type="number" class="marks" placeholder="Practical" onchange="calculateTotal(this)"></td>
+                    <td><span class="total-marks">0</span></td>
+                </tr>
+                <tr>
+                    <td>DFS012-107</td>
+                    <td>Practical II</td>
+                    <td>100</td>
+                    <td><input type="number" class="marks" placeholder="Theory" onchange="calculateTotal(this)"></td>
+                    <td><input type="number" class="marks" placeholder="Practical" onchange="calculateTotal(this)"></td>
+                    <td><span class="total-marks">0</span></td>
+                </tr>
+                <tr>
+                    <td>DFS012-108</td>
+                    <td>Practical III</td>
+                    <td>100</td>
+                    <td><input type="number" class="marks" placeholder="Theory" onchange="calculateTotal(this)"></td>
+                    <td><input type="number" class="marks" placeholder="Practical" onchange="calculateTotal(this)"></td>
+                    <td><span class="total-marks">0</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="results" rowspan="1" colspan="6" width="800px" >
+            <tr>
+            <td><span style="color:brown"><strong>Grand Total:</strong></span> <span id="grandTotal">000</span><br>
+                <span style="color:brown"> <strong>In Words:</strong></span> <span id="inWords">Zero Hundred Zero Zero</span></td>
+        </tr>
+        </table>
+        <table>
+            <tr>
+            <td><span style="color:brown"><strong>Month and Year of Examination:</strong></span> May 2020</td>
+            <td><span style="color:brown"><strong>No. of Subject Offered:</strong> </span>T5+P3=8</td>
+            <td><span style="color:brown"><strong>Result:</strong> </span>PASS</td>
+            <td><span style="color:brown"><strong>Percentage:</strong></span> <span id="percentage">00.00%</span></td>
+            <td><span style="color:brown"><strong>Grade:</strong> </span><span id="grade">(Grade)</span></td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <p><span style="color:brown"><strong>Date:</strong></span>01.08.2024</p>
+            <p id="para"><strong>(Signature of Deputy Controller of Examination)</strong><br>
+                <span style="color:brown"> <strong>Deputy Controller of Examination</strong></p>
+        </div>
+        <H3 style="margin-left:200px"><span style="color:brown">Subject marked with * indicates Exemption</span></H3>
+    </div>
+    <script src="scripts.js">
+        function calculateTotal(element) {
+    let row = element.closest('tr');
+    let marks = row.querySelectorAll('.marks');
+    let total = 0;
+
+    marks.forEach(mark => {
+        let value = parseInt(mark.value) || 0;
+        total += value;
+    });
+
+    row.querySelector('.total-marks').textContent = total;
+
+    calculateGrandTotal();
+}
+
+function calculateGrandTotal() {
+    let totalMarksElements = document.querySelectorAll('.total-marks');
+    let grandTotal = 0;
+
+    totalMarksElements.forEach(total => {
+        grandTotal += parseInt(total.textContent);
+    });
+
+    document.getElementById('grandTotal').textContent = grandTotal;
+    document.getElementById('percentage').textContent = ((grandTotal / 800) * 100).toFixed(2) + '%';
+    document.getElementById('inWords').textContent = numberToWords(grandTotal) + ' Hundred Zero Zero';
+    document.getElementById('grade').textContent = calculateGrade(grandTotal / 8);
+}
+
+function numberToWords(num) {
+    const a = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+    const b = ['Zero', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+    if (num < 20) return a[num];
+    let digit = num % 10;
+    if (num < 100) return b[Math.floor(num / 10)] + (digit ? ' ' + a[digit] : '');
+    if (num < 1000) return a[Math.floor(num / 100)] + ' Hundred' + (num % 100 == 0 ? '' : ' ' + numberToWords(num % 100));
+}
+
+function calculateGrade(average) {
+    if (average >= 90) return 'A';
+    if (average >= 80) return 'B';
+    if (average >= 70) return 'C';
+    if (average >= 60) return 'D';
+    return 'F';
+}
+    </script>
+</body>
+</html>
